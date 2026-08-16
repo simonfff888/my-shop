@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Shop</title>
+  <meta name="description" content="Handmade goods, made with love. Worldwide shipping.">
+  <meta property="og:title" content="My Shop">
+  <meta property="og:description" content="Handmade goods, made with love. Worldwide shipping.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/placeholder.svg">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#top" id="brand">My Shop</a>
+    <nav class="nav">
+      <a href="#products">Shop</a>
+      <a href="#shipping">Shipping</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <h1 id="hero-title">My Shop</h1>
+      <p class="hero-subtitle" id="hero-subtitle">Handmade with love, shipped worldwide.</p>
+      <a class="cta" href="#products">Shop Now</a>
+    </section>
+
+    <section class="section" id="products">
+      <h2 class="section-title">Products</h2>
+      <div class="product-grid" id="product-grid"></div>
+      <p class="paypal-notice" id="paypal-notice" hidden></p>
+    </section>
+
+    <section class="section" id="shipping">
+      <h2 class="section-title">Shipping &amp; Returns</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>🚚 Shipping</h3>
+          <p id="shipping-info">We ship worldwide. Flat-rate shipping applies to every order.</p>
+        </div>
+        <div class="info-card">
+          <h3>↩️ Returns</h3>
+          <p>Not happy with your order? Contact us within 14 days of delivery and we'll make it right.</p>
+        </div>
+        <div class="info-card">
+          <h3>🔒 Secure Payment</h3>
+          <p>All payments are processed securely through PayPal. Major credit and debit cards are accepted.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2 class="section-title">FAQ</h2>
+      <details>
+        <summary>How do I pay?</summary>
+        <p>All payments are securely processed through PayPal. You don't need a PayPal account — most major credit and debit cards are accepted at checkout.</p>
+      </details>
+      <details>
+        <summary>How long does shipping take?</summary>
+        <p>Orders are packed and shipped within 1–3 business days. Delivery usually takes 7–21 days depending on your country.</p>
+      </details>
+      <details>
+        <summary>Do you ship to my country?</summary>
+        <p>Yes — we ship worldwide. Shipping cost is a flat rate per order, no matter where you are.</p>
+      </details>
+      <details>
+        <summary>Can I return an item?</summary>
+        <p>If you're not happy with your order, contact us within 14 days of delivery and we'll arrange a refund or replacement.</p>
+      </details>
+    </section>
+
+    <section class="section" id="contact">
+      <h2 class="section-title">Get in Touch</h2>
+      <p>Questions? Reach out anytime — we usually reply within 24 hours.</p>
+      <div class="contact-links">
+        <a class="btn" id="ig-link" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-outline" id="email-link" href="#">Email</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p id="footer-text">© 2026 My Shop · Handmade with love</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
