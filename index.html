@@ -10,9 +10,14 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/placeholder.svg">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <div class="announcement-bar" id="announcement">Worldwide shipping</div>
 
   <header class="site-header">
     <a class="brand" href="#top" id="brand">My Shop</a>
@@ -28,17 +33,25 @@
     <section class="hero" id="top">
       <h1 id="hero-title">My Shop</h1>
       <p class="hero-subtitle" id="hero-subtitle">Handmade with love, shipped worldwide.</p>
-      <a class="cta" href="#products">Shop Now</a>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#products">Shop Now</a>
+        <a class="btn btn-outline" href="#contact">Contact Us</a>
+      </div>
     </section>
 
     <section class="section" id="products">
-      <h2 class="section-title">Products</h2>
+      <div class="section-header">
+        <h2 class="section-title">Shop Our Products</h2>
+      </div>
+      <div class="category-chips" id="category-chips" hidden></div>
       <div class="product-grid" id="product-grid"></div>
       <p class="paypal-notice" id="paypal-notice" hidden></p>
     </section>
 
     <section class="section" id="shipping">
-      <h2 class="section-title">Shipping &amp; Returns</h2>
+      <div class="section-header">
+        <h2 class="section-title">Shipping &amp; Returns</h2>
+      </div>
       <div class="info-grid">
         <div class="info-card">
           <h3>🚚 Shipping</h3>
@@ -56,7 +69,9 @@
     </section>
 
     <section class="section" id="faq">
-      <h2 class="section-title">FAQ</h2>
+      <div class="section-header">
+        <h2 class="section-title">FAQ</h2>
+      </div>
       <details>
         <summary>How do I pay?</summary>
         <p>All payments are securely processed through PayPal. You don't need a PayPal account — most major credit and debit cards are accepted at checkout.</p>
@@ -76,17 +91,42 @@
     </section>
 
     <section class="section" id="contact">
-      <h2 class="section-title">Get in Touch</h2>
+      <div class="section-header">
+        <h2 class="section-title">Get in Touch</h2>
+      </div>
       <p>Questions? Reach out anytime — we usually reply within 24 hours.</p>
       <div class="contact-links">
-        <a class="btn" id="ig-link" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-gold" id="ig-link" href="#" target="_blank" rel="noopener">Instagram</a>
         <a class="btn btn-outline" id="email-link" href="#">Email</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p id="footer-text">© 2026 My Shop · Handmade with love</p>
+    <div class="footer-grid">
+      <div class="footer-col footer-col-about">
+        <h4>About</h4>
+        <p id="footer-about">Handmade with love, shipped worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="#products">All Products</a>
+        <a href="#shipping">Shipping &amp; Returns</a>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <a id="footer-ig" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a id="footer-email" href="#">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footer-text">© 2026 My Shop · Handmade with love</p>
+    </div>
   </footer>
 
   <script src="js/config.js"></script>

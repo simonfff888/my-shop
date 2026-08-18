@@ -19,11 +19,14 @@
 | --- | --- |
 | 网站名字 | `siteName` |
 | 首页介绍语 | `tagline` |
+| 顶部黑色公告栏 | `announcement`（写 `""` 表示不要公告栏） |
 | Instagram 账号 | `instagram`（只填用户名，不要 @） |
 | 联系邮箱 | `email` |
-| 商品列表 | `products`（名字、价格、图片、介绍） |
+| 商品列表 | `products`（名字、价格、图片、介绍、分类、角标） |
 | 运费 | `shippingFee`（填 0 = 包邮） |
 | 货币 | `currency`（默认美元 USD） |
+
+**商品价格先空着**：把 `price` 填 `0` 就不会显示价格和购买按钮，以后定好价格把数字填上，按钮会自动出现。`originalPrice` 填比 `price` 大的数字会显示划线原价；`badge` 填 `"New"` 或 `"Sale"` 会在图片角上显示小标签；`category` 是分类名，会自动出现在"Shop by Category"分类按钮里。
 
 **换商品照片**：把照片放进 `images` 文件夹，然后把对应商品的 `image` 改成 `"images/你的照片.jpg"`。
 
