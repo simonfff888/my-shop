@@ -21,9 +21,9 @@
   document.getElementById("brand").textContent = CONFIG.siteName;
   document.getElementById("hero-title").textContent = CONFIG.siteName;
   document.getElementById("hero-subtitle").textContent = CONFIG.tagline;
-  document.getElementById("footer-text").textContent =
-    "© " + new Date().getFullYear() + " " + CONFIG.siteName + " · " + CONFIG.tagline;
-  document.getElementById("footer-about").textContent = CONFIG.tagline;
+  document.getElementById("footer-copyright").textContent =
+    "© " + new Date().getFullYear() + " " + CONFIG.siteName + " · All Rights Reserved";
+  document.getElementById("newsletter-text").textContent = CONFIG.newsletterText;
 
   var igHref = "https://www.instagram.com/" + CONFIG.instagram.replace(/^@/, "");
   var emailHref = "mailto:" + CONFIG.email;
@@ -31,8 +31,30 @@
   document.getElementById("ig-link").href = igHref;
   document.getElementById("email-link").href = emailHref;
   document.getElementById("email-link").textContent = CONFIG.email;
-  document.getElementById("footer-ig").href = igHref;
-  document.getElementById("footer-email").href = emailHref;
+
+  // ── 1.5 页脚链接（先空着，在 config 里填了就会显示） ──
+  var footerBoxes = {
+    explore: document.getElementById("footer-explore"),
+    support: document.getElementById("footer-support"),
+    popular: document.getElementById("footer-popular")
+  };
+  Object.keys(footerBoxes).forEach(function (key) {
+    var list = CONFIG.footerLinks[key] || [];
+    list.forEach(function (item) {
+      var a = document.createElement("a");
+      a.href = item.href;
+      a.textContent = item.label;
+      footerBoxes[key].appendChild(a);
+    });
+  });
+
+  // ── 1.6 订阅表单（还没接邮件服务，先显示提示） ──
+  var newsletterForm = document.getElementById("newsletter-form");
+  newsletterForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    document.getElementById("newsletter-wrap").innerHTML =
+      '<p class="newsletter-note">' + CONFIG.newsletterNote + "</p>";
+  });
 
   var shipInfo = document.getElementById("shipping-info");
   shipInfo.textContent = CONFIG.shippingFee > 0

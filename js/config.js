@@ -21,6 +21,25 @@ const CONFIG = {
   // 你的联系邮箱
   email: "you@example.com",
 
+  // ── 页脚 ─────────────────────────────────────────────────
+  // 页脚三栏的链接（和 bigredcoin 一样：Explore / Support / Popular Search）。
+  // 现在先空着，以后填上就显示。格式是 { label: "显示文字", href: "网址" }，
+  // 多个用英文逗号隔开，比如：
+  //   explore: [
+  //     { label: "About Us", href: "#" },
+  //     { label: "Blog", href: "#" }
+  //   ],
+  footerLinks: {
+    explore: [],
+    support: [],
+    popular: []
+  },
+
+  // "Sign up and save" 栏的介绍文字
+  newsletterText: "Sign up and receive 15% off your first order.",
+
+  // 点击 Subscribe 后显示的提示（邮件订阅服务还没接，先显示这句）
+  newsletterNote: "Thanks! Newsletter signup is coming soon.",
   // ── PayPal 收款 ──────────────────────────────────────────
   // 重要！先在 developer.paypal.com 注册应用（步骤见 README.md 第 4 节），
   // 把获得的 Client ID 粘贴到下面引号里，网站才能收款。

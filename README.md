@@ -23,6 +23,8 @@
 | Instagram 账号 | `instagram`（只填用户名，不要 @） |
 | 联系邮箱 | `email` |
 | 商品列表 | `products`（名字、价格、图片、介绍、分类、角标） |
+| 页脚链接 | `footerLinks`（Explore / Support / Popular Search 三栏，先空着，填了才显示） |
+| 订阅栏文字 | `newsletterText`（订阅栏的介绍语） |
 | 运费 | `shippingFee`（填 0 = 包邮） |
 | 货币 | `currency`（默认美元 USD） |
 
